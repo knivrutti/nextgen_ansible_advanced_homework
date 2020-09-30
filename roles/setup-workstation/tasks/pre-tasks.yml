@@ -3,6 +3,12 @@
      user: cloud-user
      state: present
      key: http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
+- name: Remove old ansible
+  yum:
+     name:
+       - ansible
+       - ansible-base
+     state: absent
 - name: Install required packages 
   yum: 
      name:
